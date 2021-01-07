@@ -1,0 +1,79 @@
+{
+  "name": "electron-training",
+  "version": "0.1.0",
+  "author": "Ahmad Ijaz",
+  "description": "My Electron app",
+  "main": "main.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^11.1.1",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^4.3.6",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js",
+    "prettier": "prettier --write .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix & npm run prettier & npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadijaz-invozone/node-fs-os-env.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadijaz-invozone/node-fs-os-env/issues"
+  },
+  "homepage": "https://github.com/ahmadijaz-invozone/node-fs-os-env#readme",
+  "keywords": [],
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_training"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
