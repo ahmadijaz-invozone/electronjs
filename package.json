@@ -5,6 +5,7 @@
   "description": "My Electron app",
   "main": "main.js",
   "dependencies": {
+    "@electron-forge/installer-dmg": "^6.0.0-beta.54",
     "dotenv": "^8.2.0",
     "electron-squirrel-startup": "^1.0.0"
   },
