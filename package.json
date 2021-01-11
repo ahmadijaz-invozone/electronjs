@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "author": "Ahmad Ijaz",
   "description": "My Electron app",
-  "main": "main.js",
+  "main": "app/main.js",
   "dependencies": {
     "@electron-forge/installer-dmg": "^6.0.0-beta.54",
     "dotenv": "^8.2.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "fs-extra": "^9.0.1",
+    "electron": "^11.1.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
